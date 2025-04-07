@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Web</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../dist/css/styles.css">
+    <script>
+      // Modo oscuro toggle
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Oswald', sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-kosma-green-100 dark:bg-kosma-green-900 text-kosma-green-900 dark:text-white">
+
+    <!-- Header -->
+    <header class="bg-kosma-green dark:bg-kosma-green-900 py-6 shadow-md">
+      <div class="container mx-auto flex justify-between items-center px-6">
+        <h1 class="text-white text-2xl font-bold">Web Dev</h1>
+        <nav class="space-x-6 text-lg">
+          <a href="#Tecnologias" class="hover:text-daybreak-orange">Tecnologías</a>
+          <a href="#Proyectos" class="hover:text-daybreak-orange">Proyectos</a>
+          <a href="#Contacto" class="hover:text-daybreak-orange">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="container mx-auto px-6 py-20 flex flex-col-reverse md:flex-row items-center gap-12">
+      <div class="md:w-1/2 space-y-6 text-center md:text-left">
+        <h2 class="text-4xl font-bold">Bienvenido a mi portfolio web</h2>
+        <p class="text-xl">Soy desarrollador Front-End</p>
+        <a href="#Contacto" class="inline-block bg-daybreak-orange text-white py-3 px-6 rounded-xl hover:bg-daybreak-orange-dark transition">Contáctame</a>
+      </div>
+      <img src="dist/assets/undraw_hello.svg" alt="Hello" class="w-full md:w-1/2 rounded-full shadow-xl" />
+    </section>
+
+    <!-- Tecnologias -->
+    <section id="Tecnologias" class="bg-kosma-green-100 dark:bg-kosma-green-800 py-20">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold mb-12">Tecnologías</h2>
+        <div class="grid gap-10 md:grid-cols-3">
+          <article>
+            <div class="w-20 h-20 bg-white rounded-full mx-auto flex items-center justify-center mb-4">
+              <!-- Icono -->
+              <svg class="w-10 h-10 fill-blue-500" viewBox="0 0 24 24"><path d="..."/></svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Tailwind CSS</h3>
+            <p>Experto en estilos modernos y responsive con Tailwind y CSS puro.</p>
+          </article>
+          <!-- Repite más artículos según tecnología -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos con categorías desplegables -->
+    <section id="Proyectos" class="py-20 bg-kosma-green-200 dark:bg-kosma-green-700">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12">Proyectos</h2>
+
+        <div class="space-y-6">
+          <!-- Categoría: Apps -->
+          <details class="bg-white dark:bg-kosma-green-800 rounded-lg p-6 shadow">
+            <summary class="text-xl font-semibold cursor-pointer">Aplicaciones Web</summary>
+            <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <article>
+                <img src="dist/assets/Isagi goal.jfif" alt="App Liga" class="rounded-xl w-full aspect-square object-cover mb-3" />
+                <h3 class="text-xl font-medium">App Liga</h3>
+                <p>Gestión de liga escolar con interfaz amigable.</p>
+              </article>
+              <article>
+                <img src="dist/assets/Wallapop.webp" alt="Wallapop" class="rounded-xl w-full aspect-square object-cover mb-3" />
+                <h3 class="text-xl font-medium">Wallapop Rip-off</h3>
+                <p>Plataforma de compra-venta hecha con Laravel.</p>
+              </article>
+            </div>
+          </details>
+
+          <!-- Categoría: Utilidades -->
+          <details class="bg-white dark:bg-kosma-green-800 rounded-lg p-6 shadow">
+            <summary class="text-xl font-semibold cursor-pointer">Utilidades</summary>
+            <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              <article>
+                <img src="dist/assets/Biblio.jpg" alt="Biblioteca" class="rounded-xl w-full aspect-square object-cover mb-3" />
+                <h3 class="text-xl font-medium">Gestión Biblioteca</h3>
+                <p>App Bootstrap para préstamo y catálogo de libros.</p>
+              </article>
+              <!-- Puedes agregar más -->
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="Contacto" class="py-20 bg-daybreak-orange-100 dark:bg-daybreak-orange-dark">
+      <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold mb-4">Contacta conmigo</h2>
+          <p class="text-lg">Déjame tu correo y te escribiré pronto.</p>
+        </div>
+        <form class="space-y-6">
+          <input type="email" required placeholder="tucorreo@example.com" class="w-full p-4 rounded-lg border border-kosma-green" />
+          <button type="submit" class="bg-daybreak-orange text-white py-3 px-6 rounded-lg hover:bg-daybreak-orange-dark transition">Enviar</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-kosma-green-900 text-white py-10">
+      <div class="container mx-auto px-6 text-center md:text-left">
+        <div class="md:flex justify-between items-center mb-6">
+          <h2 class="text-xl font-semibold">Web Dev</h2>
+          <p>correo@email.com</p>
+        </div>
+        <div class="flex justify-center md:justify-between items-center">
+          <nav class="space-x-6">
+            <a href="#Tecnologias">Tecnologías</a>
+            <a href="#Proyectos">Proyectos</a>
+            <a href="#Contacto">Contacto</a>
+          </nav>
+          <div class="flex gap-4 mt-6 md:mt-0">
+            <a href="#"><img src="dist/assets/bxl-instagram.svg" class="w-6" /></a>
+            <a href="#"><img src="dist/assets/bxl-youtube.svg" class="w-6" /></a>
+            <a href="#"><img src="dist/assets/bxl-linkedin-square.svg" class="w-6" /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
