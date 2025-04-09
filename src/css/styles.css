@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
+
+
 @theme{
+
 
   
     --color-kosma-green-900: #202821;
@@ -23,4 +26,6 @@
     --color-daybreak-orange-300: #ff9b55;
     --color-daybreak-orange-200: #ffa654;
     --color-daybreak-orange-100: #ffb153;
+
+    --color-bootstrap-purple: #6f42c1;
 }
