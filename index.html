@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Web</title>
-    <link rel="stylesheet" href="../dist/css/styles.css">
+    <link rel="stylesheet" href="./dist/css/styles.css">
     <script>
       // Modo oscuro toggle
       if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -145,27 +145,29 @@
         <h2 class="text-4xl font-bold text-center mb-12">Proyectos</h2>
 
           <div class="space-y-6 justify-center">
-          <!-- Categoría: Apps -->
-          <details class="bg-white dark:bg-gray-700 rounded-lg p-6 shadow">
-            <summary class="text-xl font-semibold cursor-pointer">Aplicaciones Web</summary>
-            <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Categoría: Apps -->
+            <details class="bg-white dark:bg-gray-700 rounded-lg p-6 shadow">
+            <summary class="text-xl font-semibold cursor-pointer" id="apps">Aplicaciones Web</summary>
+            <div class="mt-6 grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
+                max-h-[350px] sm:max-h-[350px] md:overflow-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-kosma-green-300 scrollbar-track-kosma-green-100">
               <article>
-                <img src="../dist/assets/football.png" alt="App Liga" class="rounded-xl w-full aspect-square object-cover mb-3" />
-                <h3 class="text-xl font-medium">App Liga</h3>
-                <p>Gestión de liga escolar con interfaz amigable.</p>
+              <img src="../dist/assets/football.png" alt="App Liga" class="rounded-xl w-full aspect-square object-cover mb-3" />
+              <h3 class="text-xl font-medium">App Liga</h3>
+              <p>Gestión de liga escolar con interfaz amigable.</p>
               </article>
               <article>
-                <img src="../dist/assets/Lar1.PNG" alt="Wallapop" class="rounded-xl w-full aspect-square object-cover mb-3" />
-                <h3 class="text-xl font-medium">Wallapop Rip-off</h3>
-                <p>Plataforma de compra-venta hecha con Laravel.</p>
+              <img src="../dist/assets/Lar1.PNG" alt="Wallapop" class="rounded-xl w-full aspect-square object-cover mb-3" />
+              <h3 class="text-xl font-medium">Wallapop Rip-off</h3>
+              <p>Plataforma de compra-venta hecha con Laravel.</p>
               </article>
             </div>
-          </details>
+            </details>
 
           <!-- Categoría: Utilidades -->
           <details class="bg-white dark:bg-gray-700 rounded-lg p-6 shadow">
-            <summary class="text-xl font-semibold cursor-pointer">Utilidades</summary>
-            <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <summary class="text-xl font-semibold cursor-pointer" id="utils">Utilidades</summary>
+            <div class="mt-6 grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 
+                max-h-[350px] sm:max-h-[350px] md:overflow-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-kosma-green-300 scrollbar-track-kosma-green-100">
               <article>
                 <img src="dist/assets/Biblio.jpg" alt="Biblioteca" class="rounded-xl w-full aspect-square object-cover mb-3" />
                 <h3 class="text-xl font-medium">Gestión Biblioteca</h3>
