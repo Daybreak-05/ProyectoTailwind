@@ -570,6 +570,11 @@
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
+  .dark\:bg-daybreak-orange-600 {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-daybreak-orange-600);
+    }
+  }
   .dark\:bg-daybreak-orange-700 {
     @media (prefers-color-scheme: dark) {
       background-color: var(--color-daybreak-orange-700);
